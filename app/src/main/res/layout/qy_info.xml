@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/scqy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/scinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/syqytitlename"
+        android:textColor="@color/app_blue"
+        android:padding="@dimen/margin_10"
+        android:textSize="@dimen/font_size_18"
+        />
+
+    <LinearLayout
+        android:paddingLeft="@dimen/margin_15"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_qya"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/text_qyb"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/text_qyc"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/text_qyd"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

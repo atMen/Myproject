@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="customer.tcrj.com.myproject.first.qyListInfoActivity">
+
+    <include layout="@layout/title" />
+
+    <customer.tcrj.com.myproject.widget.SuperScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:paddingBottom="@dimen/margin_15"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/qj_info" />
+            <include layout="@layout/syr_info"/>
+            <include layout="@layout/qy_info" />
+            <include layout="@layout/syqy_info"/>
+        </LinearLayout>
+
+
+
+
+
+    </customer.tcrj.com.myproject.widget.SuperScrollView>
+
+
+</LinearLayout>

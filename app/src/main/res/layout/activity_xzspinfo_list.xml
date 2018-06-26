@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/title_xzsp"
+        layout="@layout/title_qycx" />
+
+    <customer.tcrj.com.myproject.widget.SuperScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:paddingBottom="@dimen/margin_15"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <include layout="@layout/qy_info" />
+        <include layout="@layout/syqy_info"/>
+        <include layout="@layout/syr_info"/>
+        <include
+            android:id="@+id/ll_jbxx"
+            layout="@layout/zfinfo_layout" />
+
+        </LinearLayout>
+
+    </customer.tcrj.com.myproject.widget.SuperScrollView>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_lcjd"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <customer.tcrj.com.myproject.widget.SimpleMultiStateView
+                android:id="@+id/SimpleMultiStateView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_centerHorizontal="true"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+            </customer.tcrj.com.myproject.widget.SimpleMultiStateView>
+
+    </LinearLayout>
+</LinearLayout>

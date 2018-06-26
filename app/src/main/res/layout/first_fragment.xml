@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:paddingBottom="@dimen/margin_15"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <customer.tcrj.com.myproject.widget.MyGridView
+                android:id="@+id/grid_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:horizontalSpacing="1dp"
+                android:listSelector="@null"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="1dp" />
+
+
+            <View
+                android:background="@color/gary_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <View
+                android:background="#f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+            <View
+                android:background="@color/gary_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+                <RelativeLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableLeft="@drawable/sy01_03"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="热门消息"
+                        android:textSize="18sp"
+                        android:textColor="#111"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/more"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        />
+
+                </RelativeLayout>
+
+            <View
+                android:background="@color/gary_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/noData"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:text="暂无数据"
+                />
+
+            <customer.tcrj.com.myproject.widget.MyListView
+                android:id="@+id/listview_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:horizontalSpacing="1dp"
+                android:listSelector="@null"
+                android:scrollbars="none"
+                android:verticalSpacing="1dp"
+                android:divider="@null"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检定内容"
+        android:textColor="@color/app_blue"
+        android:padding="@dimen/margin_10"
+        android:textSize="@dimen/font_size_18"
+        />
+
+    <LinearLayout
+        android:paddingLeft="@dimen/margin_15"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/qy_texta"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textb"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textc"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textd"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+
+        <TextView
+            android:id="@+id/qy_texte"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textf"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textg"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_texth"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+
+        <TextView
+            android:id="@+id/qy_texti"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textj"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textk"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textl"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+
+        <TextView
+            android:id="@+id/qy_textm"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textn"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_texto"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+
+        <TextView
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="备注："
+            android:textColor="@color/bg_3F41"
+            />
+        <TextView
+            android:id="@+id/qy_textp"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+        <TextView
+            android:id="@+id/qy_textq"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

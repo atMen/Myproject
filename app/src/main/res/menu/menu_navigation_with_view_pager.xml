@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_music"
+        android:checked="true"
+        android:icon="@drawable/sy01_07"
+        android:title="@string/music" />
+    <item
+        android:id="@+id/menu_backup"
+        android:icon="@drawable/sy01_09"
+        android:title="@string/backup" />
+    <item
+        android:id="@+id/menu_friends"
+        android:icon="@drawable/wd01_10"
+        android:title="@string/friends" />
+</menu>

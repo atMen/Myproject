@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jdlc_bg"
+    android:padding="@dimen/padding_5"
+    android:orientation="vertical"
+    android:layout_margin="2dp">
+
+
+
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:text="企业："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_author"
+            android:layout_toRightOf="@id/tv_author"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:text="企业："
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_author"
+            android:layout_toRightOf="@id/tv_author"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:text="企业："
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:text="企业："
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="15sp"/>
+
+    <TextView
+        android:text="企业："
+        android:id="@+id/tv_blsj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_author"
+        android:layout_toRightOf="@id/tv_author"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/primary_text_default_material_light"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:text="企业："
+        android:id="@+id/tv_blr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/primary_text_default_material_light"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:text="企业："
+        android:id="@+id/tv_bljg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/primary_text_default_material_light"
+        android:textSize="15sp"/>
+
+
+
+</LinearLayout>

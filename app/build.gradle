@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'realm-android'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "customer.tcrj.com.myproject"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    //使AS知道.so文件的位置
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/jpush-android-2.1.0.jar')
+
+    compile project(':MultilevelTreeLibrary')
+    //    compile 'com.github.zzz40500:AndroidSweetSheet:1.1.0'
+    compile project(':sweetsheet')
+    compile files('libs/Android_Map3D_SDK_V5.6.0_20171128.jar')
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.airbnb.android:lottie:2.1.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.24'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.tsy:myokhttp:1.1.4'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    compile 'com.github.pinguo-zhouwei:MZBannerView:v2.0.1'
+    compile 'org.jsoup:jsoup:1.10.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    compile 'com.pgyersdk:sdk:2.8.1'
+
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}

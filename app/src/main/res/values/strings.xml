@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">西安质监通</string>
+
+    <string name="music">首页</string>
+    <string name="backup">消息</string>
+    <string name="friends">设置</string>
+    <string name="welcome_login">登录</string>
+    <string name="login">登录</string>
+
+    <string name="agent_addr">地址：%1$s</string>
+
+    <!-- 状态视图  -->
+    <string name="loading">加载中...</string>
+    <string name="text_empty">还没有数据呢！</string>
+    <string name="data_failed">数据加载失败</string>
+    <string name="load_failed">没有更多数据啦！(刷新)</string>
+    <string name="data_nomore">暂无更多数据</string>
+    <string name="text_nonet">网络异常！</string>
+    <string name="text_retry">点击重试</string>
+    <!--<string name="load_failed">加载失败，请点我重试</string>-->
+    <string name="hint_login_username">请输入账号</string>
+    <string name="hint_login_password">请输入密码</string>
+    <string name="login_forget_pwd">忘记密码请联系管理员</string>
+    <string name="please_input_limit_pwd">请输入数字或字母</string>
+
+    <string name="qyinfo">企业信息</string>
+    <string name="zsinfo">证书信息</string>
+    <string name="qytitlename">生产企业信息</string>
+    <string name="jctitlename">检验检测信息</string>
+    <string name="xzxkname">行政许可信息</string>
+    <string name="flfgname">法律法规信息</string>
+    <string name="zsname">证书管理信息</string>
+    <string name="scbzname">生产标准信息</string>
+    <string name="djname">党建信息</string>
+    <string name="grinfo">获证人员信息</string>
+    <string name="jycpinfo">检验产品信息</string>
+    <string name="syqytitlename">使用企业信息</string>
+    <string name="qjtitlename">器具基本信息</string>
+    <string name="sbtitlename">特种设备信息</string>
+    <string name="tstitlename">投诉举报信息</string>
+
+    <string name="all">全部信息</string>
+    <string name="scbz_all">全部</string>
+    <string name="qyname">企业名称</string>
+    <string name="xycode">社会信用代码</string>
+    <string name="zzjgcode">组织机构代码</string>
+
+
+    <string name="sbmc">设备名称</string>
+    <string name="scdw">生产单位</string>
+    <string name="sydw">使用单位</string>
+    <string name="sbm">识别码</string>
+
+    <string name="qjmc">设备名称</string>
+    <string name="txm">条形码</string>
+
+    <string name="username">姓名</string>
+    <string name="zjname">证件号码</string>
+
+    <string name="cpname">产品名称</string>
+
+    <string name="mlname">目录名称</string>
+    <string name="fgtitle">法规标题</string>
+    <string name="fwzh">发文字号</string>
+
+
+    <string name="scbz_jy">禁用</string>
+    <string name="scbz_qy">启用</string>
+
+    <string name="hy">会议</string>
+    <string name="jc">检查</string>
+    <string name="xx">学习</string>
+    <string name="qt">其他</string>
+
+    <string name="yy">营业</string>
+    <string name="ty">停业</string>
+    <string name="cj">筹建</string>
+    <string name="gb">关闭</string>
+
+</resources>
