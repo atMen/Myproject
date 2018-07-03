@@ -25,6 +25,7 @@ import java.util.List;
 import butterknife.BindView;
 import customer.tcrj.com.myproject.MyApp;
 import customer.tcrj.com.myproject.R;
+import customer.tcrj.com.myproject.Utils.ACache;
 import customer.tcrj.com.myproject.adpater.FreshNewsAdapter;
 import customer.tcrj.com.myproject.adpater.QyListAdapter;
 import customer.tcrj.com.myproject.base.BaseFragment;
@@ -64,6 +65,7 @@ public class MessageFragment extends BaseFragment implements FreshNewsAdapter.On
 
     private int pageNum = 1;
     private boolean canPull = true;
+    private String key;
 
     @Override
     protected int setLayout() {
@@ -72,9 +74,11 @@ public class MessageFragment extends BaseFragment implements FreshNewsAdapter.On
 
     @Override
     protected void setView() {
+
+        key = ACache.get(mContext).getAsString("Key");
         mMyOkhttp = MyApp.getInstance().getMyOkHttp();
 
-        title_tv.setText("消息");
+        title_tv.setText("通知公告");
         btnback.setVisibility(View.GONE);
 
         mPtrFrameLayout.disableWhenHorizontalMove(true);
@@ -128,7 +132,7 @@ public class MessageFragment extends BaseFragment implements FreshNewsAdapter.On
     //获取网络数据
     private void getData(final int num) {
         mMyOkhttp.post()
-                .url(ApiConstants.tzlistApi)
+                .url(ApiConstants.tzlistApi+key)
                 .addParam("pageSize","20")
                 .addParam("pageIndex",num+"")
                 .enqueue(new GsonResponseHandler<tzInfo>() {
@@ -250,22 +254,22 @@ public class MessageFragment extends BaseFragment implements FreshNewsAdapter.On
 
 
     private boolean ishidden;
-    @Override
-    public void onHiddenChanged(boolean hidden) {
-        super.onHiddenChanged(hidden);
-        Log.e("TAG","hidden"+hidden);
-
-        if(!hidden){
-            Log.e("TAG","刷新消息");
-            getData(1);
-        }
-
-        ishidden = hidden;
-//        if(data != null && !hidden){
-//            disableLoadMoreIfNotFullPage(mRecyclerView,data.size());
+//    @Override
+//    public void onHiddenChanged(boolean hidden) {
+//        super.onHiddenChanged(hidden);
+//        Log.e("TAG","hidden"+hidden);
+//
+//        if(!hidden){
+//            Log.e("TAG","刷新消息");
+//            getData(1);
 //        }
-
-    }
+//
+//        ishidden = hidden;
+////        if(data != null && !hidden){
+////            disableLoadMoreIfNotFullPage(mRecyclerView,data.size());
+////        }
+//
+//    }
 
 
 }

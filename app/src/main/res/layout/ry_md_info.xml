@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_czjg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="持证机构"
+        android:textColor="@color/app_blue"
+        android:padding="@dimen/margin_10"
+        android:textSize="@dimen/font_size_18"
+        />
+
+    <LinearLayout
+        android:paddingLeft="@dimen/margin_15"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_czjga"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/text_czjgb"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/text_czjgc"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/text_czjgd"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+        <TextView
+            android:id="@+id/text_czjge"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/text_czjgf"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="荣誉事项内容："
+            android:textColor="#111111"
+            android:textSize="@dimen/font_size_16"
+            />
+        <TextView
+            android:id="@+id/text_czjgg"
+            android:padding="@dimen/padding_1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+        
+    </LinearLayout>
+
+
+
+</LinearLayout>

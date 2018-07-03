@@ -20,6 +20,7 @@ import java.util.List;
 import butterknife.BindView;
 import customer.tcrj.com.myproject.MyApp;
 import customer.tcrj.com.myproject.R;
+import customer.tcrj.com.myproject.Utils.ACache;
 import customer.tcrj.com.myproject.adpater.FreshNewsAdapter;
 import customer.tcrj.com.myproject.base.BaseActivity;
 import customer.tcrj.com.myproject.bean.tzInfo;
@@ -49,6 +50,7 @@ public class pushMessageActivity extends BaseActivity implements FreshNewsAdapte
 
     private int pageNum = 1;
     private boolean canPull = true;
+    private String key;
 
     @Override
     protected int setLayout() {
@@ -57,9 +59,10 @@ public class pushMessageActivity extends BaseActivity implements FreshNewsAdapte
 
     @Override
     protected void setView() {
+        key = ACache.get(this).getAsString("Key");
         mMyOkhttp = MyApp.getInstance().getMyOkHttp();
         mPtrFrameLayout.disableWhenHorizontalMove(true);
-        title_tv.setText("消息");
+        title_tv.setText("通知公告");
         btnback.setOnClickListener(this);
 
         mPtrFrameLayout.setPtrHandler(new PtrHandler() {
@@ -112,7 +115,7 @@ public class pushMessageActivity extends BaseActivity implements FreshNewsAdapte
     //获取网络数据
     private void getData(final int num) {
         mMyOkhttp.post()
-                .url(ApiConstants.tzlistApi)
+                .url(ApiConstants.tzlistApi+key)
                 .addParam("pageSize","20")
                 .addParam("pageIndex",num+"")
                 .enqueue(new GsonResponseHandler<tzInfo>() {

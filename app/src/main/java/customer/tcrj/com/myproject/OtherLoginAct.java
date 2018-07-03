@@ -272,7 +272,7 @@ public class OtherLoginAct extends FragmentActivity implements View.OnClickListe
 
         Log.e("TAG","toLogin-registrationID"+registrationID);
 
-        showLoadingDialog("正在登陆...");
+        showLoadingDialog("正在登录...");
         mMyOkhttp.post()
                 .url(ApiConstants.loginApi)
                 .addParam("UserName",user)

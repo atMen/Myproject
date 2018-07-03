@@ -31,6 +31,7 @@ import butterknife.BindView;
 import customer.tcrj.com.myproject.Utils.ACache;
 import customer.tcrj.com.myproject.Utils.Utils;
 import customer.tcrj.com.myproject.adpater.qycxListAdapter;
+import customer.tcrj.com.myproject.adpater.qyryListAdapter;
 import customer.tcrj.com.myproject.adpater.scbzListAdapter;
 import customer.tcrj.com.myproject.base.BaseActivity;
 import customer.tcrj.com.myproject.bean.qycx;
@@ -111,7 +112,12 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
                 pageNum = 1;
-                getType();
+                if(lx.equals("3")){
+                    getryData(pageNum,string);
+                }else {
+                    getType();
+                }
+
 
             }
         });
@@ -127,9 +133,7 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
             @Override
             public void onLoadMoreRequested() {
                 Log.e("TAG","点击重新加载数据");
-
                getType();
-
             }
         }, mRecyclerView);
 
@@ -165,6 +169,60 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
 
     private String lx = "2";
     //获取网络数据
+    private void getryData(final int num,String qyname) {
+
+        Log.e("TAG","key："+key);
+        mMyOkhttp.post()
+                .url(ApiConstants.qyrylistApi+key)
+                .addParam("JCLB",CurrentStateNumber)
+                .addParam("OrParam",qyname == null? "":qyname)
+                .addParam("pageSize","10")
+                .addParam("pageIndex",num+"")
+                .tag(this)
+                .enqueue(new GsonResponseHandler<qycx>() {
+                    @Override
+                    public void onFailure(int statusCode, String error_msg) {
+                        Log.e("TAG","失败："+error_msg);
+//                        Toast.makeText(qyListActivity.this, error_msg, Toast.LENGTH_SHORT).show();
+
+                        if(num > 1){
+                            loadMoreData(null,true);
+                        }else{
+                            loadData(null,true);
+
+                        }
+                    }
+
+                    @Override
+                    public void onSuccess(int statusCode, qycx response) {
+//                      Toast.makeText(qyListActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+
+                        Log.e("TAG","response："+response.getStat()+"num:"+num);
+
+                        if(response.getStat() == null){
+
+                            if(num > 1){//上拉加载
+                                loadMoreData(response,false);
+                            }else{//下拉刷新
+                                loadData(response.getData(),false);
+                            }
+
+                        }else{
+
+                            if(response.getStat().equals("101")){
+                                Utils.toLogin(qycxListActivity.this);
+                            }
+                        }
+
+
+
+                    }
+                });
+
+
+
+    }
+    //获取网络数据
     private void getData(final int num,String qyname) {
 
 
@@ -197,7 +255,7 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
 
                     @Override
                     public void onSuccess(int statusCode, qycx response) {
-//                        Toast.makeText(qyListActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+//                      Toast.makeText(qyListActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
 
                         Log.e("TAG","response："+response.getStat()+"num:"+num);
 
@@ -272,7 +330,8 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
 
         } else {
             onclicresponse = response;
-
+//            new qyryListAdapter(beanList,this)
+//            mRecyclerView.setAdapter();
             canPull = true;
             pageNum++;
             detailAdapter.setNewData(response);
@@ -281,6 +340,8 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
             disableLoadMoreIfNotFullPage(mRecyclerView,response.size());
         }
     }
+
+
 
     private PopupWindow mPopTop;
     private TextView tvPopuReport;
@@ -398,8 +459,10 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
                 //获取筛选值
                 if(lx.equals("2")){
                     getSXDataFromNet(".51.");
-                }else{
+                }else if(lx.equals("1")){
                     getSXDataFromNet(".45.");
+                }else if(lx.equals("3")){
+                    getSXDataFromNet(".77.");
                 }
 
                 break;
@@ -416,7 +479,12 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
                 }else{
 
                     pageNum = 1;
-                    getType();
+
+                    if(lx.equals("3")){
+                        getryData(pageNum,string);
+                    }else {
+                        getType();
+                    }
                 }
 
                 break;
@@ -452,10 +520,11 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
                 tv_one.setSelected(false);
                 tv_two.setSelected(false);
                 tv_three.setSelected(true);
-                lx = "2";
+                CurrentStateNumber = "";
+                lx = "3";
                 pageNum = 1;
                 string = null;
-                getType();
+                getryData(pageNum,string);
                 break;
         }
     }
@@ -466,10 +535,19 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
 
         if(onclicresponse != null){
-            qycx.DataBean dataBean1 = onclicresponse.get(position);
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("ycxinfo",dataBean1);
-            toClass(this,qycxListInfoActivity.class,bundle);
+
+            if(lx.equals("3")){
+                qycx.DataBean dataBean1 = onclicresponse.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("ycxinfo",dataBean1);
+                toClass(this,qyryListInfoActivity.class,bundle);
+            }else {
+                qycx.DataBean dataBean1 = onclicresponse.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("ycxinfo",dataBean1);
+                toClass(this,qycxListInfoActivity.class,bundle);
+            }
+
         }
 
     }
@@ -550,7 +628,12 @@ public class qycxListActivity extends BaseActivity implements BaseQuickAdapter.O
                 pageNum = 1;
                 string = null;
                 edtsearch.setText(null);
-                getType();
+
+                if(lx.equals("3")){
+                    getryData(pageNum,string);
+                }else {
+                    getType();
+                }
                 return false;
             }
         });

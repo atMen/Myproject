@@ -192,7 +192,7 @@ public class xzspListInfoActivity extends BaseActivity{
         jdqy.setText("申请单位信息");
         syr.setText("申请人信息");
         spxx.setText("审批信息 ");
-
+        scqy.setVisibility(View.GONE);
         btnback.setOnClickListener(this);
         tv_currentstatenumber.setVisibility(View.GONE);
         tv_one.setOnClickListener(this);
@@ -235,19 +235,19 @@ public class xzspListInfoActivity extends BaseActivity{
     private void setjbInfoData(xzspInfo.DataBean dataBean1) {
         if(dataBean1 != null){
 
-            xzspInfo.DataBean.XKDWInfoBean xkdwInfo1 = dataBean1.getXKDWInfo();
-            if(xkdwInfo1.getQYMC() != null){
-                scqy.setVisibility(View.VISIBLE);
-                text_qya.setText("企业名称："+xkdwInfo1.getQYMC());
-                text_qyb.setText("统一社会信用代码："+xkdwInfo1.getTYSHXYDM());
-                text_qyc.setText("法人姓名: "+xkdwInfo1.getFDDBRXM());
-                text_qyd.setText("法人证件号码: "+xkdwInfo1.getFDDBRZJHM());
-            }else {
-                text_qya.setText("企业名称：");
-                text_qyb.setText("统一社会信用代码：");
-                text_qyc.setText("法人姓名: ");
-                text_qyd.setText("法人证件号码: ");
-            }
+//            xzspInfo.DataBean.XKDWInfoBean xkdwInfo1 = dataBean1.getXKDWInfo();
+//            if(xkdwInfo1.getQYMC() != null){
+//                scqy.setVisibility(View.VISIBLE);
+//                text_qya.setText("企业名称："+xkdwInfo1.getQYMC());
+//                text_qyb.setText("统一社会信用代码："+xkdwInfo1.getTYSHXYDM());
+//                text_qyc.setText("法人姓名: "+xkdwInfo1.getFDDBRXM());
+//                text_qyd.setText("法人证件号码: "+xkdwInfo1.getFDDBRZJHM());
+//            }else {
+//                text_qya.setText("企业名称：");
+//                text_qyb.setText("统一社会信用代码：");
+//                text_qyc.setText("法人姓名: ");
+//                text_qyd.setText("法人证件号码: ");
+//            }
 
 
             xzspInfo.DataBean.SQDWInfoBean sqdwInfo1 = dataBean1.getSQDWInfo();

@@ -112,7 +112,7 @@ public class qycxListInfoActivity extends BaseActivity {
                 text_syqyd.setText("统一社会信用代码："+fzjgInfo.getTYSHXYDM());
             }
 
-                text_qya.setText("守（失）信领域："+sbinfo.getSXLYName());
+                text_qya.setText("守（失）信领域："+sbinfo.getMC());
                 text_qyb.setText("公示期限："+sbinfo.getGSQX());
 
                 text_czgra.setText("认定机关："+sbinfo.getRDJG());

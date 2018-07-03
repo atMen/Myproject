@@ -89,7 +89,7 @@ public class JPushReceiver extends BroadcastReceiver {
                     /**
                      * 不需要登陆或者已经登陆的Case,直接跳转到内容显示页面
                      */
-//                    Intent pushIntent = new Intent();
+//                  Intent pushIntent = new Intent();
                     pushIntent.setClass(context, pushMessageActivity.class);
                     pushIntent.putExtra("fromPush", true);
                 }
@@ -187,4 +187,27 @@ public class JPushReceiver extends BroadcastReceiver {
         }
         return false;
     }
+
+//    private void openNotification(Context context, Bundle bundle){
+//        String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
+//        String myValue = "";
+//        try {
+//            JSONObject extrasJson = new JSONObject(extras);
+//            myValue = extrasJson.optString("myKey");
+//        } catch (Exception e) {
+//            Logger.w(TAG, "Unexpected: extras is not a valid json", e);
+//            return;
+//        }
+//        if (TYPE_THIS.equals(myValue)) {
+//            Intent mIntent = new Intent(context, ThisActivity.class);
+//            mIntent.putExtras(bundle);
+//            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            context.startActivity(mIntent);
+//        } else if (TYPE_ANOTHER.equals(myValue)){
+//            Intent mIntent = new Intent(context, AnotherActivity.class);
+//            mIntent.putExtras(bundle);
+//            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            context.startActivity(mIntent);
+//        }
+//    }
 }

@@ -60,7 +60,6 @@ public class ApiConstants {
     public static final String jycplistApi = URLROOT+"Mobile/GetCP?Key=";
 
 
-
     /**
      * 计量器具信息列表
      */
@@ -109,6 +108,12 @@ public class ApiConstants {
      * 企业诚信信息列表
      */
     public static final String qycxlistApi = URLROOT+"Mobile/GetCXMD?Key=";
+
+    /**
+     *
+     * GetCXRY?Key
+     */
+    public static final String qyrylistApi = URLROOT+"Mobile/GetCXRY?Key=";
 
     /**
      * 投诉举报信息列表

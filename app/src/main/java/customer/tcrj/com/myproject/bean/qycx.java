@@ -103,7 +103,62 @@ public class qycx implements Serializable{
         private int QYID;
         private Object QyName;
         private int SXLY;
-        private String SXLYName;
+
+        public String getMC() {
+            return MC;
+        }
+
+        public void setMC(String MC) {
+            this.MC = MC;
+        }
+
+        private String MC;
+        private String WHBH;
+        private String PDRQ;
+
+        public String getWHBH() {
+            return WHBH;
+        }
+
+        public void setWHBH(String WHBH) {
+            this.WHBH = WHBH;
+        }
+
+        public String getPDRQ() {
+            return PDRQ;
+        }
+
+        public void setPDRQ(String PDRQ) {
+            this.PDRQ = PDRQ;
+        }
+
+        public String getPDDW() {
+            return PDDW;
+        }
+
+        public void setPDDW(String PDDW) {
+            this.PDDW = PDDW;
+        }
+
+        public String getDFBM() {
+            return DFBM;
+        }
+
+        public void setDFBM(String DFBM) {
+            this.DFBM = DFBM;
+        }
+
+        public String getRYSXNR() {
+            return RYSXNR;
+        }
+
+        public void setRYSXNR(String RYSXNR) {
+            this.RYSXNR = RYSXNR;
+        }
+
+        private String PDDW;
+        private String DFBM;
+        private String RYSXNR;
         private String LRWH;
         private String LRRQ;
         private String LRSY;
@@ -111,6 +166,16 @@ public class qycx implements Serializable{
         private String YCRQ;
         private String YCYY;
         private String YCJDJG;
+
+        public String getJCLB() {
+            return JCLB;
+        }
+
+        public void setJCLB(String JCLB) {
+            this.JCLB = JCLB;
+        }
+
+        private String JCLB;
         private String GSQX;
         private int LX;
         private QyxxBean Qyxx;
@@ -147,13 +212,6 @@ public class qycx implements Serializable{
             this.SXLY = SXLY;
         }
 
-        public String getSXLYName() {
-            return SXLYName;
-        }
-
-        public void setSXLYName(String SXLYName) {
-            this.SXLYName = SXLYName;
-        }
 
         public String getLRWH() {
             return LRWH;
