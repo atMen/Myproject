@@ -4,6 +4,7 @@ package customer.tcrj.com.myproject;
 import android.app.Application;
 import android.util.Log;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.tsy.sdk.myokhttp.MyOkHttp;
 
 
@@ -26,6 +27,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         sMyApp = this;
+        SDKInitializer.initialize(this);
         initOkhttp();
         initJPush();
     }
