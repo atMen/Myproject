@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pgyersdk.crash.PgyCrashManager;
 import com.pgyersdk.javabean.AppBean;
 import com.pgyersdk.update.PgyUpdateManager;
 import com.pgyersdk.update.UpdateManagerListener;
@@ -229,6 +230,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        PgyCrashManager.unregister();
         mHandler.removeCallbacksAndMessages(null);
         AppManager.getAppManager().finishActivity(this); //从栈中移除
     }

@@ -224,6 +224,11 @@
             android:value="f3d70d0a9e8e4c1aa8601377955ea7ac" >
         </meta-data>
 
+        <!--f3d70d0a9e8e4c1aa8601377955ea7ac pgy在线更新-->
+
+
+
+
         <!-- 极光推送//////////////////////////////////////////////////////////////////////////////START -->
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
